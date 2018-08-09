@@ -15,20 +15,26 @@ const Navigation = ({ authUser }) => (
 );
 
 const NavigationAuth = () => (
-  <ul className="navbar">
-    <li><Link to={routes.LANDING}>YOGI FINDER</Link></li>
-    <li><Link to={routes.HOME}>Dashboard</Link></li>
-    <li><SignOutButton /></li>
-  </ul>
+  <div className="navbar-menu" aria-label="main navigation">
+    <div className="navbar-start">
+      <Link to={routes.LANDING}>YOGI FINDER</Link>
+    </div>
+    <div className="navbar-end">
+      <Link to={routes.HOME}>Dashboard</Link>
+      <SignOutButton />
+    </div>
+  </div>
 );
 
 const NavigationNonAuth = () => (
-  <nav className="navbar" role="navigation" aria-label="main navigation">
-    <div className="navbar-brand">
+  <div className="navbar-menu" aria-label="main navigation">
+    <div className="navbar-start">
       <p className="navbar-item"><Link to={routes.LANDING}>YOGI FINDER</Link></p>
-      <button className="button navbar-item"><Link to={routes.SIGN_IN}>Instructor Login</Link></button>
     </div>
-  </nav>
+    <div className="navbar-end">
+      <p className="navbar-item"><Link to={routes.SIGN_IN}>Instructor Login</Link></p>
+    </div>
+  </div>
 
 );
 
